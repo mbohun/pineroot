@@ -36,8 +36,8 @@ LINUX_SITE = $(call qstrip,$(BR2_LINUX_KERNEL_CUSTOM_REPO_URL))
 LINUX_SITE_METHOD = hg
 else ifeq ($(BR2_LINUX_KERNEL_CUSTOM_SVN),y)
 
-LINUX_SITE = /mnt/data/mjp/pine/kernel/linux-orange-pi-5.12-20210522-1320
-# LINUX_SITE = "/mnt/data/mjp/linux/linux"
+#LINUX_SITE = /mnt/data/mjp/pine/kernel/linux-orange-pi-5.12-20210522-1320
+LINUX_SITE = /mnt/data/mjp/linux/linux
 LINUX_SITE_METHOD = local
 
 
@@ -543,7 +543,7 @@ LINUX_PRE_PATCH_HOOKS += $(foreach ext,$(LINUX_EXTENSIONS),\
 # Checks to give errors that the user can understand
 
 # When a custom repository has been set, check for the repository version
-ifeq ($(BR2_LINUX_KERNEL_CUSTOM_SVN)$(BR2_LINUX_KERNEL_CUSTOM_GIT)$(BR2_LINUX_KERNEL_CUSTOM_HG),y)
+ifeq ($(BR2_LINUX_KERNEL_CUSTOM_GIT)$(BR2_LINUX_KERNEL_CUSTOM_HG),y)
 ifeq ($(call qstrip,$(BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION)),)
 $(error No custom repository version set. Check your BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION setting)
 endif
