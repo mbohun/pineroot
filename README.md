@@ -17,11 +17,18 @@ make
 glmark2-es2-drm
 ```
 
-## Configure
+## Wifi configuration
 
 iwd based wifi
 
 ```
 iwctl --passphrase [psk] station wlan0 connect [ssid]
+```
+
+## Weston
+
+```
+/usr/bin/weston -i0 --tty=3 &
+weston-flower
 ```
 
