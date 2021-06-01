@@ -1,0 +1,6 @@
+config BR2_PACKAGE_LITERM
+	bool "literm"
+	depends on BR2_PACKAGE_QT5
+	help
+	  A terminal emulator using QtQuick.
+

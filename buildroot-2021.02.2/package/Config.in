@@ -2511,4 +2511,9 @@ menu "Text editors and viewers"
 	source "package/vim/Config.in"
 endmenu
 
+menu "pineroot packages"
+        source "package/literm/Config.in"
+endmenu
+
+
 endmenu
