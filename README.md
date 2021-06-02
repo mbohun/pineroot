@@ -32,3 +32,9 @@ iwctl --passphrase [psk] station wlan0 connect [ssid]
 weston-flower
 ```
 
+## literm
+
+```
+literm -platform wayland-egl -fullscreen -mobile
+```
+
