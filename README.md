@@ -38,3 +38,8 @@ weston-flower
 literm -platform wayland-egl -fullscreen -mobile
 ```
 
+## qml-launcher
+
+```
+qml-launcher -platform wayland-egl
+```
