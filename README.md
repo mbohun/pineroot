@@ -24,6 +24,16 @@ iwd based wifi
 ```
 iwctl --passphrase [psk] station wlan0 connect [ssid]
 ```
+## Modem start/stop
+
+# request powerup
+echo 1 > /sys/class/modem-power/modem-power/device/powered
+# request powerdown
+echo 0 > /sys/class/modem-power/modem-power/device/powered
+# read power status (changes only after power state transition is complete)
+cat /sys/class/modem-power/modem-power/device/powered
+
+...
 
 ## Weston
 
