@@ -1,0 +1,17 @@
+[Unit]
+Description=literm
+After=wayland.service wayland.socket
+Requires=wayland.service wayland.socket
+
+[Service]
+WorkingDirectory=/root
+EnvironmentFile=/etc/sysconfig/pineroot
+KillMode=process
+ExecStartPre=/bin/sleep 1
+ExecStart=/bin/literm -platform wayland-egl -fullscreen -mobile
+Restart=always
+RestartSec=1
+TimeoutStartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,7 @@
+[Unit]
+Description=Wayland Socket
+Before=sockets.target
+
+[Socket]
+ListenStream=/tmp/wayland-0
+

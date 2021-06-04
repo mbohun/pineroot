@@ -1,0 +1,10 @@
+[Unit]
+Description=weston
+Requires=wayland.socket 
+After=wayland.socket 
+
+[Service]
+EnvironmentFile=/etc/sysconfig/pineroot
+ExecStart=/usr/bin/weston -i0 --tty=3 
+Restart=always
+
