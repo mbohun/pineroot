@@ -39,6 +39,26 @@ echo 0 > /sys/class/modem-power/modem-power/device/powered
 cat /sys/class/modem-power/modem-power/device/powered
 ```
 
+# Mobile data activation 
+
+```
+# Power modem up (and wait ~20 seconds)
+echo 1 > /sys/class/modem-power/modem-power/device/powered
+# Check link layer protocol format
+qmicli --device=/dev/cdc-wdm0 --device-open-proxy --wda-get-data-format
+# Interface down
+ip link set dev wwan0 down
+# If interface suports raw_ip, change it
+cat /sys/class/net/wwan0/qmi/raw_ip
+echo Y > /sys/class/net/wwan0/qmi/raw_ip
+# Interface up
+ip link set dev wwan0 up
+# Activate connection with 'internet' APN
+qmicli --device=/dev/cdc-wdm0 --device-open-proxy --wds-start-network="ip-type=4,apn=internet" --client-no-release-cid
+# Get IP with dhcp
+udhcpc -q -f -n -i wwan0
+```
+
 ## Weston
 
 ```
