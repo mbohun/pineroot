@@ -1,0 +1,6 @@
+config BR2_PACKAGE_PINEUI
+	bool "pine-ui"
+	depends on BR2_PACKAGE_QT5
+	help
+	  QT based UI sample code
+
