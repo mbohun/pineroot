@@ -1,6 +1,9 @@
 # pineroot
 
-* Buildroot image for [PinePhone](https://wiki.pine64.org/index.php/PinePhone).
+Buildroot environment for [PinePhone](https://wiki.pine64.org/index.php/PinePhone)
+
+![buildroot process](https://github.com/e59e4835/pineroot/blob/master/img/buildroot-process.png)
+
 
 ## Build
 
