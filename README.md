@@ -1,11 +1,18 @@
 # pineroot
 
-Buildroot environment for [PinePhone](https://wiki.pine64.org/index.php/PinePhone)
+[Buildroot](https://buildroot.org/) environment for [PinePhone](https://wiki.pine64.org/index.php/PinePhone) with simple and manageable approach.
+
+Single 'make' command produces your own image, which you can copy to MicroSD card and boot on PinePhone. Our default image boots
+to wayland and starts [literm](https://github.com/rburchell/literm) for you. We even included [pine-ui](https://github.com/e59e4835/pine-ui)
+qt-quick skeleton application as embedded QT5 demo for kick starting your own developments. You can even utilize buildroot toolchain with
+QT Creator for rapid 'in device' development. 
+
+Our approach is simple, manageable and embedded friendly, thanks to buildroot.
 
 ![buildroot process](https://github.com/e59e4835/pineroot/blob/master/img/buildroot-process.png)
 
 
-## Build
+## Build your image
 
 ```
 git clone https://github.com/e59e4835/pineroot.git
