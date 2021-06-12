@@ -4,7 +4,7 @@
 
 Single 'make' command produces your own image, which you can copy to MicroSD card and boot on PinePhone. Our default image boots
 to wayland and starts [literm](https://github.com/rburchell/literm) for you. We even included [pine-ui](https://github.com/e59e4835/pine-ui)
-qt-quick skeleton application as embedded QT5 demo for kick starting your own developments. You can even utilize buildroot toolchain with
+qt-quick skeleton application as embedded QT5 demo for kick starting your own developments. You can also utilize buildroot toolchain with
 QT Creator for rapid 'in device' development. 
 
 Our approach is simple, manageable and embedded friendly, thanks to buildroot.
