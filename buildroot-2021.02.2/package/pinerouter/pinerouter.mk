@@ -15,7 +15,7 @@ define PINEROUTER_BUILD_CMDS
 endef
 
 define PINEROUTER_INSTALL_TARGET_CMDS
-        (cd $(@D); cp pinerouter $(PINEROUTER_PREFIX)/bin)
+        (cd $(@D); cp pinerouter-ui $(PINEROUTER_PREFIX)/bin)
 
 endef
 
