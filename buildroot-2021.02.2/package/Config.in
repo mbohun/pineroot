@@ -2515,6 +2515,7 @@ menu "pineroot packages"
         source "package/literm/Config.in"
 	source "package/qml-launcher/Config.in"
 	source "package/pineui/Config.in"
+	source "package/pinerouter/Config.in"
 endmenu
 
 

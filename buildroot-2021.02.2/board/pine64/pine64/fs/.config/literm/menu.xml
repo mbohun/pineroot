@@ -5,17 +5,16 @@
         <command>echo 1000 > /sys/class/backlight/backlight/brightness\r</command>
     </item>
     <item>
-        <title>Modem On</title>
-        <command>echo 1 > /sys/class/modem-power/modem-power/device/powered\r</command>
-    </item>
-    <item>
-        <title>Modem Off</title>
-        <command>echo 0 > /sys/class/modem-power/modem-power/device/powered\r</command>
-    </item>
-    <item>
         <title>LTE Connect</title>
-        <command>/root/utils/lte.sh\r</command>
+        <command>/root/utils/lte-connect.sh\r</command>
     </item>
+
+    <item>
+        <title>PineRouter</title>
+        <command>pinerouter-ui -platform wayland-egl\r</command>
+    </item>
+
+
     <item>
         <title>Ctrl-C</title>
         <command>\x03</command>
