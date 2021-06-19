@@ -1,0 +1,14 @@
+[Unit]
+Description=LTE Cell inquiry
+After=multi-user.target
+
+[Service]
+WorkingDirectory=/tmp
+KillMode=process
+ExecStart=/root/utils/cell.sh
+Restart=always
+RestartSec=1
+TimeoutStartSec=5
+
+[Install]
+WantedBy=multi-user.target
