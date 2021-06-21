@@ -1,7 +1,7 @@
 PINEROUTER_VERSION = 8b339eecc4f5dc31fd8ff9424c34fd9d4a5b4c02
 PINEROUTER_SITE = https://github.com/e59e4835/pinerouter-ui.git
 PINEROUTER_SITE_METHOD = git
-PINEROUTER_DEPENDENCIES = qt5base qt5xmlpatterns
+PINEROUTER_DEPENDENCIES = qt5base qt5quickcontrols2
 PINEROUTER_PREFIX = $(TARGET_DIR)/usr
 
 MYQMAKE = $(TOPDIR)/output/host/usr/bin/qmake

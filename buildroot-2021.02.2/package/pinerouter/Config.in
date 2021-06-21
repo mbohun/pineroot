@@ -1,6 +1,7 @@
 config BR2_PACKAGE_PINEROUTER
 	bool "pinerouter"
 	depends on BR2_PACKAGE_QT5
+	depends on BR2_PACKAGE_QT5QUICKCONTROLS2
 	help
 	  QT based UI for Pinerouter
 
