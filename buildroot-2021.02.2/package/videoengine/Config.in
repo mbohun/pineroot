@@ -1,0 +1,6 @@
+config BR2_PACKAGE_VIDEOENGINE
+	bool "videoengine"
+	depends on BR2_PACKAGE_GSTREAMER1
+	help
+	  videosend
+

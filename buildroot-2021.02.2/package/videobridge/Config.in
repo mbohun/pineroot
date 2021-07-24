@@ -1,0 +1,6 @@
+config BR2_PACKAGE_VIDEOBRIDGE
+	bool "videobridge"
+	depends on BR2_PACKAGE_QT5
+	help
+	  QML Videobridge
+
