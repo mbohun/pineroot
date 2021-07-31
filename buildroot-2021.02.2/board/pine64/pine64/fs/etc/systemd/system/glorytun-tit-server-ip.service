@@ -1,0 +1,14 @@
+[Unit]
+Description=Glorytun ip
+Requires=sys-devices-virtual-net-tun1.device
+After=glorytun-tit-server.service sys-devices-virtual-net-tun1.device
+
+[Service]
+Type=simple
+EnvironmentFile=/opt/glorytun/glorytun.env
+WorkingDirectory=/opt/glorytun
+ExecStart=/sbin/ip address add local ${TIT_SERVER_LOCAL_IP} remote ${TIT_SERVER_REMOTE_IP} dev ${TIT_SERVER_INTERFACE} 
+CapabilityBoundingSet=CAP_NET_ADMIN
+
+[Install]
+WantedBy=multi-user.target

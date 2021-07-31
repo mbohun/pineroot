@@ -1,0 +1,15 @@
+[Unit]
+Description=Glorytun tit client bind
+After=network.target network-online.target
+Wants=glorytun-tit-client-ip.service glorytun-tit-client-path.service glorytun-tit-client-link.service
+
+[Service]
+Type=simple
+EnvironmentFile=/opt/glorytun/glorytun.env
+WorkingDirectory=/opt/glorytun
+ExecStart=/bin/glorytun bind ${TIT_CLIENT_GLORYTUN_BINDS} to ${TIT_CLIENT_SERVER_IP} ${TIT_CLIENT_TUN_PORT} keyfile ${TIT_CLIENT_TUN_KEYFILE} dev ${TIT_CLIENT_SERVER_INTERFACE}  ${TIT_CLIENT_TUN_CIPHER} 
+CapabilityBoundingSet=CAP_NET_ADMIN
+
+[Install]
+WantedBy=multi-user.target
+

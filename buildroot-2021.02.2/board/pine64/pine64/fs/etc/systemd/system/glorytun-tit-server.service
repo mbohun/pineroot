@@ -1,0 +1,15 @@
+[Unit]
+Description=Glorytun Tunnel In Tunnel server
+After=network.target network-online.target
+Wants=glorytun-tit-server-ip.service glorytun-tit-server-link.service
+
+[Service]
+Type=simple
+EnvironmentFile=/opt/glorytun/glorytun.env
+WorkingDirectory=/opt/glorytun
+ExecStart=glorytun bind $LOCAL_IP $TIT_SERVER_PORT keyfile $TIT_SERVER_KEYFILE
+CapabilityBoundingSet=CAP_NET_ADMIN
+
+[Install]
+WantedBy=multi-user.target
+

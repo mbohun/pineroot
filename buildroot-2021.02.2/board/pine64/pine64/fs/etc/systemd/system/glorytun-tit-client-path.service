@@ -1,0 +1,14 @@
+[Unit]
+Description=Glorytun path
+After=glorytun-tit-client-ip.service sys-devices-virtual-net-tun2.device
+
+[Service]
+Type=simple
+EnvironmentFile=/opt/glorytun/glorytun.env
+WorkingDirectory=/opt/glorytun
+ExecStart=/bin/glorytun path up ${LOCAL_IP} rate tx ${TIT_CLIENT_TX_BW} rx ${TIT_CLIENT_RX_BW} dev ${TIT_CLIENT_SERVER_INTERFACE}
+CapabilityBoundingSet=CAP_NET_ADMIN
+
+[Install]
+WantedBy=multi-user.target
+

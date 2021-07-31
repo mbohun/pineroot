@@ -1,0 +1,15 @@
+[Unit]
+Description=Glorytun bind
+After=network.target network-online.target
+Wants=glorytun-ip.service glorytun-path.service glorytun-link.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/glorytun
+EnvironmentFile=/opt/glorytun/glorytun.env
+ExecStart=/bin/glorytun bind 0.0.0.0 to ${SERVER_IP} ${TUN_PORT} keyfile ${TUN_KEYFILE} ${TUN_CIPHER}
+CapabilityBoundingSet=CAP_NET_ADMIN
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,14 @@
+[Unit]
+Description=Glorytun link
+After=glorytun-tit-server-ip.service sys-devices-virtual-net-tun1.device
+
+[Service]
+Type=simple
+EnvironmentFile=/opt/glorytun/glorytun.env
+WorkingDirectory=/opt/glorytun
+ExecStart=/sbin/ip link set dev ${TIT_SERVER_INTERFACE} up
+CapabilityBoundingSet=CAP_NET_ADMIN
+
+[Install]
+WantedBy=multi-user.target
+
