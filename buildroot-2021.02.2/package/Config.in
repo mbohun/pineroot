@@ -2518,6 +2518,8 @@ menu "pineroot packages"
 	source "package/pinerouter/Config.in"
 	source "package/videobridge/Config.in"
 	source "package/videoengine/Config.in"
+	source "package/audiostreamer/Config.in"
+	source "package/audioreceiver/Config.in"
 endmenu
 
 
